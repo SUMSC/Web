@@ -1,10 +1,7 @@
 <?php 
-define('DB_HOST', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '6287672liu');
-$DB_NAME = 'msc';
+require_once("config.php");
 $TB_NAME = 'Cproblem';
-$DB = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, $DB_NAME);
+
 /////////////
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
