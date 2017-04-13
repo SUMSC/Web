@@ -9,7 +9,7 @@
 		</div>
 	</div>
 	
-	<?php require_once('frequentquestion.php'); ?>
+	<?php require_once('fixforfreequestion.php'); ?>
 
 	<div id="fh5co-testimonial">
 		<div class="container">
@@ -36,7 +36,7 @@
 				</div>
 				<div class="col-md-8 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 					<div class="row">
-						<form method="POST" action="get_Cproblem.php" enctype="multipart/form-data"> 
+						<form method="POST" action="fixforfreeGetCproblem.php" enctype="multipart/form-data"> 
 							<div class="col-md-2">
 								<div class="form-group">
 									<input class="form-control" name="name" placeholder="姓名" type="text">
