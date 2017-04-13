@@ -32,11 +32,9 @@ mysql_close($con);
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-					<h2>建设中</h2>
-					<p>待续</p>
+
 				</div>
-				<!--
-				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
+								<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
 					<div class="fh5co-property">
 						<figure>
 							<img src="images/slide_3.jpg" alt="Free Website Templates FreeHTML5.co" class="img-responsive">
@@ -295,6 +293,6 @@ mysql_close($con);
 					  </ul>
 					</nav>
 				</div>
-			</div>-->
+			</div>
 		</div>
 	</div>

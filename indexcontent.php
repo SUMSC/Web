@@ -1,7 +1,3 @@
-<div class="col-md-12 text-center"><br><br><br><br><br>
-建设中
-</div>
-<!--
 <li style="background-image: url(images/slide_1.jpg);">
 		   		<div class="container">
 		   			<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
@@ -25,7 +21,7 @@
 		   				</div>
 		   			</div>
 		   		</div>
-		   	</li>
+</li>
 		   	<li style="background-image: url(images/slide_2.jpg);">
 		   		<div class="container">
 		   			<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
@@ -58,8 +54,8 @@
 	                        <p class="fh5co-property-specification">
                         		<span>活动 <strong>x</strong> 个</span>  <span><strong>y</strong> 在进行</span>  <span><strong>XX</strong> 名成员</span>  <span><strong>1</strong> 来姐</span>
                         	</p>
-	                        <p><a href="#" class="btn btn-primary">Learn more</a></p>
-
+	                        <p><a href="aboutus.php" class="btn btn-primary">Learn more</a></p>
+	            </li>
 				<li style="background-image: url(images/slide_3.jpg);">
 		   		<div class="container">
 		   			<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
@@ -71,7 +67,7 @@
 	                        <p class="fh5co-property-specification">
                         		<span>已修复 <strong> x </strong>  个</span>  <span><strong>y</strong> 待修理</span>  <span><strong>XX</strong> 名成员空闲</span>  <span><strong>1</strong> 来姐</span>
                         	</p>
-	                        <p><a href="#" class="btn btn-primary">我要修理</a></p>
+	                        <p><a href="fixforfree.php" class="btn btn-primary">我要修理</a></p>
 
 
 	   						</div>
@@ -79,4 +75,3 @@
 		   			</div>
 		   		</div>
 		   	</li>
--->

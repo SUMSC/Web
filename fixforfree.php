@@ -21,7 +21,7 @@ $status = $_GET['status'];
 	<?php require_once('head.php'); ?>
 <?php if($status == "submitted"){ 
 ?>
-	<?php require_once('repairman_introduc.php');
+	<?php require_once('f4fRepairmanIntro.php');
 
 	 ?>
 
