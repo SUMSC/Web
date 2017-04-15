@@ -15,7 +15,7 @@
 	$getPW = $row['0'];
     if($getPW == $loginPW)
 	{
-	   	$_SESSION['admin'] = 1;
+	   	$_SESSION['admin'] = $loginID;
 	}
     else
 	{

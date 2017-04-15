@@ -13,7 +13,7 @@
 -->
 
 	<div>	
-	<h1>上传文章</h1>
+	<h1>上传活动</h1>
 	</div>
 	<form method="POST" action="backstageActivitySubmit.php" enctype="multipart/form-data"> 
 

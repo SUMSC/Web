@@ -72,13 +72,13 @@ else
 							<a href="backstage.php?column=1">活动上传</a>
 						</li>
 						<li>
-							<a href="#">内部资料</a>
+							<a href="backstage.php?column=2">资料上传</a>
 						</li>
 						<li>
-							<a href="#">记录查询</a>
+							<a href="backstage.php?column=3">资料查看</a>
 						</li>
 						<li>
-							<a href="#">首页更新</a>
+							<a href="backstage.php?column=4">首页更新</a>
 						</li>
 					</ul>
 				</div>

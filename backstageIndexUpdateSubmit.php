@@ -1,18 +1,14 @@
 <?php 
+session_start();
 require_once("config.php");
-$TB_NAME = 'Activity';
-
+$TB_NAME = 'firstpage';
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
     $title = $_POST['title'];
+    $abstract = $_POST['abstract'];
     $links = $_POST['links'];
-    echo $links.'<br>';
-    $content = $_POST['content'];
-    $date = $_POST['date'];
     $file = $_POST['file'];
-    $place = $_POST['place'];
-    $id = $_POST['id'];
 // 允许上传的图片后缀
 $allowedExts = array("gif", "jpeg", "jpg", "png");
 $temp = explode(".", $_FILES["file"]["name"]);
@@ -39,7 +35,7 @@ if ((($_FILES["file"]["type"] == "image/gif")
 		
 		// 判断当期目录下的 upload 目录是否存在该文件
 		// 如果没有 upload 目录，你需要创建它，upload 目录权限为 777
-		if (file_exists("upload/" . $_FILES["file"]["name"]))
+		if (file_exists("upload/Index/" . $_FILES["file"]["name"]))
 		{
 			echo $_FILES["file"]["name"] . " 文件已经存在。 ";
 		}
@@ -47,16 +43,16 @@ if ((($_FILES["file"]["type"] == "image/gif")
 		{
 			if($DB->connect_error)
  				   die('Connect to mysql failed.<br>');
-			$sql = "select max(id) as maxid from Activity;";
+			$sql = "select max(id) as maxid from firstpage;";
 			$result = $DB->query($sql);
 			$row = $result->fetch_row();
 			$id = $row[0]+1;
-			mkdir('upload/'.$id);
+			mkdir('upload/Index/'.$id);
 
 			// 如果 upload 目录不存在该文件则将文件上传到 upload 目录下
-			move_uploaded_file($_FILES["file"]["tmp_name"], "upload/" .$id."/". 	iconv("UTF-8","GBK",$_FILES["file"]["name"]));
-			echo "文件存储在: " . "upload/" .$id."/".  $_FILES["file"]["name"];
-			$pic = "upload/" .$id."/".  $_FILES["file"]["name"];
+			move_uploaded_file($_FILES["file"]["tmp_name"], "upload/Index/" .$id."/". 	iconv("UTF-8","GBK",$_FILES["file"]["name"]));
+			echo "文件存储在: " . "upload/Index/" .$id."/".  $_FILES["file"]["name"];
+			$pic = "upload/Index/" .$id."/".  $_FILES["file"]["name"];
 		}
 	}
 }
@@ -68,7 +64,7 @@ else
 
 if($DB->connect_error)
     die('Connect to mysql failed.<br>');
-$sql = "insert into $TB_NAME ( name, Infor_path, News_1, Img_path, time, location) values ( '$title', '$links', '$content','$pic','$date','$place');";
+$sql = "insert into $TB_NAME ( title, abstract, Link, Imgpath) values ( '$title', '$abstract', '$links','$pic');";
 $result = $DB->query($sql);
 if( $result <= 0 )
     die("Insert into table $TB_NAME failed.<br>");
