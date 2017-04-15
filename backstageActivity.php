@@ -1,24 +1,19 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<?php
-$status = $_GET['status'];
-?>
+<!--[if gt IE 8]><!--><!-- <html class="no-js"> --> <!--<![endif]-->
 
+<!--
 	<head>
-	<!--这里是头部连接-->
-	<?php require_once('headlink.php'); ?>
+	<?php // require_once('headlink.php'); ?>
     </head>
 	<body>
 
+-->
 
-
-<?php if($status == ""){ 
-?>
 	<div>	
-	<h1>上传文章</h1>
+	<h1>上传活动</h1>
 	</div>
 	<form method="POST" action="backstageActivitySubmit.php" enctype="multipart/form-data"> 
 
@@ -37,16 +32,9 @@ $status = $_GET['status'];
    <br><br>
    <input type="submit" name="submit" value="提交"> 
 </form>
-<?php } 
-else {
-?>
-	<div>	
-	<h1>上传成功</h1>
-	<a href="index.php">返回首页</a>
-	</div>
-<?php } 
-?>
-	<!--这里js库-->
-	<?php require_once('endlink.php'); ?>
+
+<!--
+	<?php// require_once('endlink.php'); ?>
 	</body>
 </html>
+-->

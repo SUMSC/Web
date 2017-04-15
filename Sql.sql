@@ -1,11 +1,11 @@
 create database MSC;
-use MSC
+use MSC;
 
 create table if not exists firstpage(
 	id int(5) primary key auto_increment,
-	Name varchar(200) NOT NULL,
-	Content varchar(200),
-	Pressname varchar(200),
+	TItle varchar(200) NOT NULL,
+	abstract varchar(200),
+	Link varchar(200),
 	Imgpath varchar(200)
 );
 
@@ -39,15 +39,21 @@ create table if not exists Member(
 	password char(20)
 );
 
+create table if not exists Document(
+	ID int(5) Primary key auto_increment,
+	Title varchar(200) NOT NULL,
+	Time DATETIME,
+	Content varchar(2000) NOT NULL,
+	Appendix varchar(200),
+	Author char(20)
+);
 
 create table if not exists Cproblem(
-	ID int(5) Primary key auto_increment,
-	name varchar(10),
+	ID char(5) Primary key,
 	College varchar(50),
 	Grade char(5),
 	Sex Char(4) CHECK(Sex IN ('男','女')),
 	Problem varchar(500),
-	contact varchar(100),
     Rate int(4),
     Worker varchar(40)
 );
