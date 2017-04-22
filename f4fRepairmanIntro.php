@@ -1,3 +1,4 @@
+<?php $report_id = $_GET['report_id'];?>
 <div id="fh5co-agents">
 		<div class="container">
 			<div class="row">
@@ -13,7 +14,7 @@
 							</figure>
 							<h3>孙昌来</h3>
 							<p>羞涩</p>
-						<p><a href="f4fRepairmanConnect.php?manid=1&report_id=<?php echo $_GET['report_id']; ?>" class="btn btn-primary btn-outline">Contact Me</a></p> 
+						<p><a href="f4fRepairmanConnect.php?manid=1&report_id=<?php echo $report_id?>" class="btn btn-primary btn-outline">Contact Me</a></p> 
 						
 						</div>
 					</div>
@@ -24,7 +25,7 @@
 							</figure>
 							<h3>杨增</h3>
 							<p>而不</p>
-							<p><a href="f4fRepairmanConnect.php?manid=2&report_id= <?php echo $_GET['report_id']; ?>" class="btn btn-primary btn-outline">Contact Me</a></p> 
+							<p><a href="f4fRepairmanConnect.php?manid=2&report_id=<?php echo $report_id?>" class="btn btn-primary btn-outline">Contact Me</a></p> 
 						</div>
 					</div>
 					<div class="col-md-3 text-center item-block animate-box" data-animate-effect="fadeIn">
@@ -34,7 +35,7 @@
 							</figure>
 							<h3>王瑞津</h3>
 							<p>想要</p>
-							<p><a href="f4fRepairmanConnect.php?manid=3&report_id= <?php echo $_GET['report_id']; ?>" class="btn btn-primary btn-outline">Contact Me</a></p>
+							<p><a href="f4fRepairmanConnect.php?manid=3&report_id=<?php echo $report_id?>" class="btn btn-primary btn-outline">Contact Me</a></p>
 						</div>
 					</div>
 					<div class="col-md-3 text-center item-block animate-box" data-animate-effect="fadeIn">
@@ -44,7 +45,7 @@
 							</figure>
 							<h3>党宏波</h3>
 							<p>说话</p>
-						<p><a href="f4fRepairmanConnect.php?manid=4&report_id= <?php echo $_GET['report_id']; ?>" class="btn btn-primary btn-outline">Contact Me</a></p> 
+						<p><a href="f4fRepairmanConnect.php?manid=4&report_id=<?php echo $report_id?>" class="btn btn-primary btn-outline">Contact Me</a></p> 
 
 						</div>
 					</div>

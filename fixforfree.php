@@ -1,5 +1,6 @@
 <?php
 $status = $_GET['status'];
+$report_id = $GET['report_id'];
 ?>
 
 
@@ -22,7 +23,6 @@ $status = $_GET['status'];
 <?php if($status == "submitted"){ 
 ?>
 	<?php require_once('f4fRepairmanIntro.php');
-
 	 ?>
 
 <?php } 

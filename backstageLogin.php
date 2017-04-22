@@ -1,10 +1,8 @@
 <?php
 	session_start();
-	require_once("config.php");
-	    echo  $_POST['inputID']."<br>";
-		
-		$loginID = $_POST['inputID'];
-		$loginPW = $_POST['inputPassword'];		
+	require_once("config.php");		
+	$loginID = $_POST['inputID'];
+	$loginPW = $_POST['inputPassword'];		
 
 	if($DB->connect_error)
     	{die('Connect to mysql failed.<br>');}
@@ -13,6 +11,7 @@
     $result = $DB->query($sql);
 	$row = $result->fetch_row();
 	$getPW = $row['0'];
+
     if($getPW == $loginPW)
 	{
 	   	$_SESSION['admin'] = $loginID;
@@ -21,5 +20,7 @@
 	{
     	$_SESSION['admin'] = "wrong";
 	}
+
+	echo $_SESSION['admin'];
 	header("location:backstage.php");
 ?>

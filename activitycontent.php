@@ -1,23 +1,3 @@
-<?php
-$con = mysql_connect("localhost","root","6287672liu");
-if (!$con)
-  {
-  die('Could not connect: ' . mysql_error());
-  }
-
-mysql_select_db("msc", $con);
-
-$result = mysql_query("SELECT * FROM activity");
-
-while($row = mysql_fetch_array($result))
-  {
-  echo $row['FirstName'] . " " . $row['LastName'];
-  echo "<br />";
-  }
-
-  
-mysql_close($con);
-?>
 	<div class="fh5co-page-title" style="background-image: url(images/slide_6.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
@@ -32,245 +12,49 @@ mysql_close($con);
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-
 				</div>
-								<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
+
+<?php
+	require_once ("config.php");
+	$TB_NAME = 'Activity';
+	$sql = "select * from activity order by id desc;";
+	$result = $DB->query($sql);
+	while($row = $result->fetch_row()){
+		$ID = $row['0'];
+		$Title = $row['1'];
+		$Time = $row['2'];
+		$Location = $row['3'];
+		$Img_path = $row['5'];
+		$News = $row['6'];
+		$content = substr($News, 0, 30);	
+ ?>
+				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
 					<div class="fh5co-property">
 						<figure>
-							<img src="images/slide_3.jpg" alt="Free Website Templates FreeHTML5.co" class="img-responsive">
+
+							<img src=<?php echo "$Img_path"; ?>  class="img-responsive">
+
+						<!--目前的数据库还没有“活动状态”
 							<a href="#" class="tag">正在进行</a>
+						-->
 						</figure>
 						<div class="fh5co-property-innter">
-							<h3><a href="#">编程之美</a></h3>
+							<h3><a href="activityShowPage.php?id=<?php echo $ID ?>"><?php echo $Title; ?></a></h3>
 							<div class="price-status">
 		               </div>
-		               <p>文案</p>
+		               <p><?php echo $content; ?></p>
 	            	</div>
 	            	<p class="fh5co-property-specification">
-	            		<span><strong>3500</strong> Sq Ft</span>  <span><strong>3</strong> Beds</span>  <span><strong>3.5</strong> Baths</span>  <span><strong>2</strong> Garages</span>
+	            		<span>时间 <strong><?php echo "$time"; ?></strong></span>  <span>地点 <strong><?php echo "$Location"; ?></strong></span>
 	            	</p>
 					</div>
-				</div>
-
-				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
-
-					<div class="fh5co-property">
-						<figure>
-							<img src="images/slide_2.jpg" alt="Free Website Templates FreeHTML5.co" class="img-responsive">
-							<a href="#" class="tag">正在进行</a>
-						</figure>
-						<div class="fh5co-property-innter">
-							<h3><a href="#">微软校园行</a></h3>
-							<div class="price-status">
-		               </div>
-		               <p>文案</p>
-	            	</div>
-	            	<p class="fh5co-property-specification">
-	            		<span><strong>3500</strong> Sq Ft</span>  <span><strong>3</strong> Beds</span>  <span><strong>3.5</strong> Baths</span>  <span><strong>2</strong> Garages</span>
-	            	</p>
-					</div>
-					
-				</div>
-				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
-
-					<div class="fh5co-property">
-						<figure>
-							<img src="images/slide_1.jpg" alt="Free Website Templates FreeHTML5.co" class="img-responsive">
-							<a href="#" class="tag">已完结</a>
-						</figure>
-						<div class="fh5co-property-innter">
-							<h3><a href="#">第二届pentahackathon</a></h3>
-							<div class="price-status">
-		                 	<span class="price">$1,540,000</span>
-		               </div>
-		               <p>文案</p>
-	            	</div>
-	            	<p class="fh5co-property-specification">
-	            		<span><strong>3500</strong> Sq Ft</span>  <span><strong>3</strong> Beds</span>  <span><strong>3.5</strong> Baths</span>  <span><strong>2</strong> Garages</span>
-	            	</p>
-					</div>
-				</div>
-
-				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
-					<div class="fh5co-property">
-						<figure>
-							<img src="images/slide_4.jpg" alt="Free Website Templates FreeHTML5.co" class="img-responsive">
-							<a href="#" class="tag">已完结</a>
-						</figure>
-						<div class="fh5co-property-innter">
-							<h3><a href="#">Hi HAckathon</a></h3>
-							<div class="price-status">
-		                 	<span class="price">$540,000 </span>
-		               </div>
-		               <p>文案</p>
-	            	</div>
-	            	<p class="fh5co-property-specification">
-	            		<span><strong>3500</strong> Sq Ft</span>  <span><strong>3</strong> Beds</span>  <span><strong>3.5</strong> Baths</span>  <span><strong>2</strong> Garages</span>
-	            	</p>
-					</div>
-				</div>
-				
-				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
-
-					<div class="fh5co-property">
-						<figure>
-							<img src="images/slide_5.jpg" alt="Free Website Templates FreeHTML5.co" class="img-responsive">
-							<a href="#" class="tag">正在进行</a>
-						</figure>
-						<div class="fh5co-property-innter">
-							<h3><a href="#">某活动</a></h3>
-							<div class="price-status">
-		                 	<span class="price">$200,000,000</span>
-		               </div>
-		               <p>文案</p>
-	            	</div>
-	            	<p class="fh5co-property-specification">
-	            		<span><strong>3500</strong> Sq Ft</span>  <span><strong>3</strong> Beds</span>  <span><strong>3.5</strong> Baths</span>  <span><strong>2</strong> Garages</span>
-	            	</p>
-					</div>
-					
-				</div>
-				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
-
-					<div class="fh5co-property">
-						<figure>
-							<img src="images/slide_6.jpg" alt="Free Website Templates FreeHTML5.co" class="img-responsive">
-							<a href="#" class="tag">正在进行</a>
-						</figure>
-						<div class="fh5co-property-innter">
-							<h3><a href="#">某活动</a></h3>
-							<div class="price-status">
-		                 	<span class="price">$1,540,000</span>
-		               </div>
-		               <p>文案</p>
-	            	</div>
-	            	<p class="fh5co-property-specification">
-	            		<span><strong>3500</strong> Sq Ft</span>  <span><strong>3</strong> Beds</span>  <span><strong>3.5</strong> Baths</span>  <span><strong>2</strong> Garages</span>
-	            	</p>
-					</div>
-				</div>
-
-
-				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
-					<div class="fh5co-property">
-						<figure>
-							<img src="images/slide_3.jpg" alt="Free Website Templates FreeHTML5.co" class="img-responsive">
-							<a href="#" class="tag">正在进行</a>
-						</figure>
-						<div class="fh5co-property-innter">
-							<h3><a href="#">某活动</a></h3>
-							<div class="price-status">
-		                 	<span class="price">$540,000 </span>
-		               </div>
-		               <p>文案</p>
-	            	</div>
-	            	<p class="fh5co-property-specification">
-	            		<span><strong>3500</strong> Sq Ft</span>  <span><strong>3</strong> Beds</span>  <span><strong>3.5</strong> Baths</span>  <span><strong>2</strong> Garages</span>
-	            	</p>
-					</div>
-				</div>
-
-				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
-
-					<div class="fh5co-property">
-						<figure>
-							<img src="images/slide_2.jpg" alt="Free Website Templates FreeHTML5.co" class="img-responsive">
-							<a href="#" class="tag">正在进行</a>
-						</figure>
-						<div class="fh5co-property-innter">
-							<h3><a href="#">某活动</a></h3>
-							<div class="price-status">
-		                 	<span class="price">$200,000,000</span>
-		               </div>
-		               <p>文案</p>
-	            	</div>
-	            	<p class="fh5co-property-specification">
-	            		<span><strong>3500</strong> Sq Ft</span>  <span><strong>3</strong> Beds</span>  <span><strong>3.5</strong> Baths</span>  <span><strong>2</strong> Garages</span>
-	            	</p>
-					</div>
-					
-				</div>
-				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
-
-					<div class="fh5co-property">
-						<figure>
-							<img src="images/slide_1.jpg" alt="Free Website Templates FreeHTML5.co" class="img-responsive">
-							<a href="#" class="tag">正在进行</a>
-						</figure>
-						<div class="fh5co-property-innter">
-							<h3><a href="#">某活动</a></h3>
-							<div class="price-status">
-		                 	<span class="price">$1,540,000</span>
-		               </div>
-		               <p>文案</p>
-	            	</div>
-	            	<p class="fh5co-property-specification">
-	            		<span><strong>3500</strong> Sq Ft</span>  <span><strong>3</strong> Beds</span>  <span><strong>3.5</strong> Baths</span>  <span><strong>2</strong> Garages</span>
-	            	</p>
-					</div>
-				</div>
-
-				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
-					<div class="fh5co-property">
-						<figure>
-							<img src="images/slide_4.jpg" alt="Free Website Templates FreeHTML5.co" class="img-responsive">
-							<a href="#" class="tag">正在进行</a>
-						</figure>
-						<div class="fh5co-property-innter">
-							<h3><a href="#">某活动</a></h3>
-							<div class="price-status">
-		                 	<span class="price">$540,000 </span>
-		               </div>
-		               <p>文案</p>
-	            	</div>
-	            	<p class="fh5co-property-specification">
-	            		<span><strong>3500</strong> Sq Ft</span>  <span><strong>3</strong> Beds</span>  <span><strong>3.5</strong> Baths</span>  <span><strong>2</strong> Garages</span>
-	            	</p>
-					</div>
-				</div>
-				
-				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
-
-					<div class="fh5co-property">
-						<figure>
-							<img src="images/slide_5.jpg" alt="Free Website Templates FreeHTML5.co" class="img-responsive">
-							<a href="#" class="tag">正在进行</a>
-						</figure>
-						<div class="fh5co-property-innter">
-							<h3><a href="#">某活动</a></h3>
-							<div class="price-status">
-		                 	<span class="price">$200,000,000</span>
-		               </div>
-		               <p>文案</p>
-	            	</div>
-	            	<p class="fh5co-property-specification">
-	            		<span><strong>3500</strong> Sq Ft</span>  <span><strong>3</strong> Beds</span>  <span><strong>3.5</strong> Baths</span>  <span><strong>2</strong> Garages</span>
-	            	</p>
-					</div>
-					
-				</div>
-				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
-
-					<div class="fh5co-property">
-						<figure>
-							<img src="images/slide_6.jpg" alt="Free Website Templates FreeHTML5.co" class="img-responsive">
-							<a href="#" class="tag">正在进行</a>
-						</figure>
-						<div class="fh5co-property-innter">
-							<h3><a href="#">某活动</a></h3>
-							<div class="price-status">
-		                 	<span class="price">$1,540,000</span>
-		               </div>
-		               <p>文案</p>
-	            	</div>
-	            	<p class="fh5co-property-specification">
-	            		<span><strong>3500</strong> Sq Ft</span>  <span><strong>3</strong> Beds</span>  <span><strong>3.5</strong> Baths</span>  <span><strong>2</strong> Garages</span>
-	            	</p>
-					</div>
-				</div>
-
+				</div>				
+<?php } ?>
 
 			</div>
+
+
+<!--分页，待完成
 			<div class="row">
 				<div class="col-md-12 text-center animate-box" data-animate-effect="fadeIn">
 					<nav>
@@ -294,5 +78,7 @@ mysql_close($con);
 					</nav>
 				</div>
 			</div>
+-->
+
 		</div>
 	</div>
