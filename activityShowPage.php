@@ -63,7 +63,7 @@
 			<div class="row">
 				<div class="col-md-6  animate-box" data-animate-effect="fadeIn">
 				<?php if($Link) {?>
-						<p>相关链接：<a href="https://<?php echo $Link; ?>"> <?php echo "$Link"; ?></a></p>
+						<p>相关链接：<a href="<?php echo $Link; ?>"> <?php echo "$Link"; ?></a></p>
 				<?php }?>
 				</div>
 				<div class="col-md-6  animate-box" data-animate-effect="fadeIn">

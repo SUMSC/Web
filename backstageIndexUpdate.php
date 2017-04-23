@@ -10,7 +10,7 @@
       头图：
       <input type="file" name="file" id="file"> 
       <br><br>
-      对应活动页面：
+      跳转页面：
       <input type="text" name="links"> 
       <br><br> 
       <input type="submit" name="submit" value="提交"> 

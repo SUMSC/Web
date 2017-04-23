@@ -45,7 +45,8 @@
 		               <p><?php echo $content; ?></p>
 	            	</div>
 	            	<p class="fh5co-property-specification">
-	            		<span>时间 <strong><?php echo "$time"; ?></strong></span>  <span>地点 <strong><?php echo "$Location"; ?></strong></span>
+	            		<span>地点 <strong><?php echo "$Location"; ?></strong></span>
+	            		<br><span>发布时：<?php echo "$Time"; ?></span>
 	            	</p>
 					</div>
 				</div>				
