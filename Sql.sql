@@ -49,10 +49,12 @@ create table if not exists Document(
 );
 
 create table if not exists Cproblem(
-	ID char(5) Primary key,
+	ID int(5) Primary key auto_increment,
+	name char(10),
 	College varchar(50),
 	Grade char(5),
-	Sex Char(4) CHECK(Sex IN ('男','女')),
+	Sex Char(4),
+	contact varchar(9),
 	Problem varchar(500),
     Rate int(4),
     Worker varchar(40)

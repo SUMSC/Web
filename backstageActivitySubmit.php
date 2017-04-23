@@ -9,7 +9,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $links = $_POST['links'];
     echo $links.'<br>';
     $content = $_POST['content'];
-    $date = $_POST['date'];
+    $date = date('y-m-d-h-i-s',time());
     $file = $_POST['file'];
     $place = $_POST['place'];
     $id = $_POST['id'];

@@ -18,9 +18,10 @@
 	<meta name="twitter:image" content="" />
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
-
-	<script type="text/javascript" src="http://blogparts.giffy.me/0013/parts.js"></script>
-	<!--↑↑↑↑来自秋秋学姐的小星星↑↑↑-->
+	
+<!--来自秋秋学姐的小星星-->
+<!--	<script type="text/javascript" src="http://blogparts.giffy.me/0013/parts.js"></script> -->
+<!-- 我再用小星星我是狗-->
 	
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
