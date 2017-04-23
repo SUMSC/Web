@@ -31,9 +31,7 @@
 				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
 					<div class="fh5co-property">
 						<figure>
-
 							<img src=<?php echo "$Img_path"; ?>  class="img-responsive">
-
 						<!--目前的数据库还没有“活动状态”
 							<a href="#" class="tag">正在进行</a>
 						-->
