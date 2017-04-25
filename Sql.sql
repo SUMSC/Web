@@ -25,7 +25,9 @@ create table if not exists Activity(
 	Location varchar(200),
 	Infor_path varchar(200),
 	Img_path varchar(200),
-	News_1 varchar(1024)
+	News_1 varchar(1024),
+	ActivityTime varchar(20),
+	Abstract varchar(30)
 );
 
 create table if not exists Member(

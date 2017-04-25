@@ -23,7 +23,7 @@
 		$result = $DB->query($sql);
 		$row = $result->fetch_row();
 		$Title = $row['1'];
-		$Time = $row['2'];
+		$Time = $row['7'];
 		$Location = $row['3'];
 		$Link = $row['4'];
 		$Img_path = $row['5'];
@@ -47,6 +47,14 @@
 	<div id="fh5co-testimonial">
 		<div class="container">
 			<div class="row">
+				<div class="col-md-6  animate-box" data-animate-effect="fadeIn">
+						<p class="text-left">Location <br><strong>    <?php echo "$Location"; ?></strong></p>
+				</div>
+				<div class="col-md-6  animate-box" data-animate-effect="fadeIn">
+						<p class="text-right">Time <br><strong>    <?php echo "$Time"; ?></strong></p>
+				</div>
+			</div>
+			<div class="row">
 				<div class="col-md-12  animate-box" data-animate-effect="fadeIn">
 						<p><?php echo "$content"; ?></p>
 				</div>
@@ -59,17 +67,14 @@
 			  	</div>
 				<div class="col-md-3"></div>
 			</div>
-			</div>
-			<div class="row">
+			<row>
 				<div class="col-md-6  animate-box" data-animate-effect="fadeIn">
-				<?php if($Link) {?>
-						<p>相关链接：<a href="<?php echo $Link; ?>"> <?php echo "$Link"; ?></a></p>
-				<?php }?>
+					<?php if($Link) {?>
+							<p>相关链接：<a href="<?php echo $Link; ?>"> <?php echo "$Link"; ?></a></p>
+					<?php }?>
+					</div>
 				</div>
-				<div class="col-md-6  animate-box" data-animate-effect="fadeIn">
-						<p class="text-right">时间 <?php echo "$Time"; ?></p>
-				</div>
-			</div>
+			</row>
 		</div>
 	</div>
 </div>

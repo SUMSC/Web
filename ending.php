@@ -8,8 +8,8 @@
 			<div class="col-md-4 col-md-push-1">
 				<h2>友情链接</h2>
 				<ul class="float">
-					<li><a href="#">苏州大学</a></li>
-					<li><a href="#">微软亚洲研究院</a></li>
+					<li><a href="http://www.suda.edu.cn/">苏州大学</a></li>
+					<li><a href="http://www.msra.cn/">微软亚洲研究院</a></li>
 				</ul>
 				
 
@@ -17,12 +17,22 @@
 
 			<div class="col-md-4">
 				<h2>联系我们</h2>
+				<p>Mail: rylu@stu.suda.edu.cn</p>
+				<p>QQ: 2105208139</p>
+				<p>Wechat:</p> 
+				<div class="row">
+					<div class="col-md-4">
+						<p><img class="img-responsive" src="images/wechat.png"></p>
+					</div>
+				</div>
+				<!--
 				<ul class="fh5co-social">
 					<li><a href="#"><i class="icon-twitter"></i></a></li>
 					<li><a href="#"><i class="icon-facebook"></i></a></li>
 					<li><a href="#"><i class="icon-google-plus"></i></a></li>
 					<li><a href="#"><i class="icon-instagram"></i></a></li>
 				</ul>
+				-->
 			</div>
 			
 			
