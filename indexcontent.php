@@ -10,7 +10,7 @@
 		$Link = $row['3'];
 		$Imgpath = $row['4'];
  ?>
-<li style="background-image: url(images/slide_1.jpg);">
+<li style="background-image: url(<?php echo $Imgpath; ?>);">
 	<div class="container">
 		<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
 			<div class="fh5co-property-brief-inner">

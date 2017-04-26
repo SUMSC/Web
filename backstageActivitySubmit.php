@@ -10,9 +10,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     echo $links.'<br>';
     $content = $_POST['content'];
     $date = date('y-m-d-h-i-s',time());
+    $activityTime = $_POST['activityTime'];
     $file = $_POST['file'];
     $place = $_POST['place'];
     $id = $_POST['id'];
+    $abstract = $_POST['abstract'];
 // 允许上传的图片后缀
 $allowedExts = array("gif", "jpeg", "jpg", "png");
 $temp = explode(".", $_FILES["file"]["name"]);
@@ -68,7 +70,7 @@ else
 
 if($DB->connect_error)
     die('Connect to mysql failed.<br>');
-$sql = "insert into $TB_NAME ( name, Infor_path, News_1, Img_path, time, location) values ( '$title', '$links', '$content','$pic','$date','$place');";
+$sql = "insert into $TB_NAME ( name, Infor_path, News_1, Img_path, time, location, ActivityTime, Abstract) values ( '$title', '$links', '$content','$pic','$date','$place','$activityTime','$abstract');";
 $result = $DB->query($sql);
 if( $result <= 0 )
     die("Insert into table $TB_NAME failed.<br>");

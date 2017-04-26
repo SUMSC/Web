@@ -22,11 +22,14 @@
 	while($row = $result->fetch_row()){
 		$ID = $row['0'];
 		$Title = $row['1'];
-		$Time = $row['2'];
+		$Time = $row['7'];
 		$Location = $row['3'];
 		$Img_path = $row['5'];
 		$News = $row['6'];
-		$content = substr($News, 0, 30);	
+		if($row['8'])
+		{$content = $row['8'];}
+		else
+		{$content = substr($News, 0, 30);}
  ?>
 				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
 					<div class="fh5co-property">
@@ -43,8 +46,8 @@
 		               <p><?php echo $content; ?></p>
 	            	</div>
 	            	<p class="fh5co-property-specification">
-	            		<span>地点 <strong><?php echo "$Location"; ?></strong></span>
-	            		<br><span>发布时：<?php echo "$Time"; ?></span>
+	            		<span>地点：<strong><?php echo "$Location"; ?></strong></span>
+	            		<br><span>活动时间：<strong><?php echo "$Time"; ?></strong></span>
 	            	</p>
 					</div>
 				</div>				

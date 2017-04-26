@@ -48,8 +48,8 @@ $mail->Host = 'smtp.126.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'cproblemofficial';                 // SMTP username
 $mail->Password = '404pagenotfound';                           // SMTP password
-$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 25;                                    // TCP port to connect to
+$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 465;                                    // TCP port to connect to
 
 $mail->setFrom('cproblemofficial@126.com', 'Cproblem');
 $mail->addAddress($mailAddress, $mailRecipient);     // Add a recipient
@@ -72,6 +72,7 @@ if(!$mail->send()) {
 } else {
     echo 'Message has been sent';
 }
+
 if($id == 1){
 
 	header("Location:http://wpa.qq.com/msgrd?v=3&uin=774500050&site=qq&menu=yes");
@@ -85,4 +86,5 @@ else if($id == 3){
 else if($id == 4){
 	header("Location:http://wpa.qq.com/msgrd?v=3&uin=627971428&site=qq&menu=yes");
 }
+
 ?>
