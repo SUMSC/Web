@@ -1,4 +1,8 @@
+
+drop database MSC;
+
 create database MSC;
+
 use MSC;
 
 create table if not exists firstpage(
@@ -9,36 +13,28 @@ create table if not exists firstpage(
 	Imgpath varchar(200)
 );
 
-create table if not exists Campus_walk(
-    name varchar(30),
-    college varchar(50),
-    grade varchar(50),
-    telphone varchar(50),
-    email varchar(50),
-    primary key(telphone)
-);
-
 create table if not exists Activity(
 	ID int(5) Primary key auto_increment,
 	Name varchar(200) NOT NULL,
 	Time DATETIME,
-	Location varchar(200),
-	Infor_path varchar(200),
+	Location varchar(1024),
+	Infor_path varchar(1024),
 	Img_path varchar(200),
-	News_1 varchar(1024),
-	ActivityTime varchar(20),
-	Abstract varchar(30)
+	News_1 blob,
+	ActivityTime varchar(200),
+	Abstract varchar(1024)
 );
 
 create table if not exists Member(
-	ID char(5) Primary key,
-	Name varchar(15) NOT NULL,
-	Img varchar(20),
+	ID char(50) Primary key,
+	Name varchar(30) NOT NULL,
+	Img varchar(30),
     Telphone varchar(15),
     Email varchar(30),
     College varchar(50),
-	Infor_ad varchar(20),
-	password char(20)
+	Infor_ad varchar(1024),
+	password char(20),
+    Privilege int default 0
 );
 
 create table if not exists Document(
@@ -52,12 +48,15 @@ create table if not exists Document(
 
 create table if not exists Cproblem(
 	ID int(5) Primary key auto_increment,
-	name char(10),
+	Name varchar(100) charset utf8,
 	College varchar(50),
-	Grade char(5),
-	Sex Char(4),
-	contact varchar(9),
-	Problem varchar(500),
+	Grade char(50),
+	Sex Char(20),
+	Contact varchar(30),
+	Problem varchar(4096),
     Rate int(4),
     Worker varchar(40)
 );
+
+
+insert into Member (ID, Name, password, Telphone, Privilege ) values ('root', 'admin', '1145141919810','18915422865', 1);

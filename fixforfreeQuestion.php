@@ -1,4 +1,5 @@
-
+<?php 
+?>
 	<div id="fh5co-testimonial">
 		<div class="container">
 			<div class="row">

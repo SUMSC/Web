@@ -9,8 +9,9 @@
 		</div>
 	</div>
 	
-	<?php require_once('fixforfreequestion.php'); ?>
-
+    <?php 
+    require_once('fixforfreeQuestion.php'); 
+?>
 	<div id="fh5co-testimonial">
 		<div class="container">
 			<div class="row">

@@ -1,4 +1,5 @@
-	<div>	
+
+    <div>	
 	<h1>更新首页</h1>
 	</div>
 	<form method="POST" action="backstageIndexUpdateSubmit.php" enctype="multipart/form-data"> 

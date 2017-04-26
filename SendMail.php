@@ -1,11 +1,12 @@
 <?php
 
-require '/PHPMailer/PHPMailerAutoload.php';
+require('PHPMailer/PHPMailerAutoload.php');
 require_once("config.php");
 $TB_NAME = 'Cproblem';
 
 
 $id = $_GET['manid'];
+
 
 if($id == 1){
 	$address='774500050@qq.com';
@@ -29,18 +30,17 @@ $mailAddress = $address;
 $mailRecipient = $recipient;
 $report_id = $_GET['report_id'];
 
-$sql = "select problem from $TB_NAME where id=$report_id";
+$sql = "select Problem from $TB_NAME where ID=$report_id";
 $result = $DB->query($sql);
 $row = $result->fetch_row();
 $content = $row[0];
 
-$sql = "select name from $TB_NAME where id=$report_id";
+$sql = "select Name from $TB_NAME where ID=$report_id";
 $result = $DB->query($sql);
 $row = $result->fetch_row();
 $name = $row[0];
 
 $mail = new PHPMailer;
-
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
@@ -86,5 +86,4 @@ else if($id == 3){
 else if($id == 4){
 	header("Location:http://wpa.qq.com/msgrd?v=3&uin=627971428&site=qq&menu=yes");
 }
-
 ?>

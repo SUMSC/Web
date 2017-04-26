@@ -19,7 +19,8 @@ $view = $_GET['view'];
 	{
 		require_once('backstageIndexUpdate.php');
 	}
-	else if($status == 1)
+    
+    if($status == 1)
 	{
 ?>
 		<h3>操作成功！</h3>
