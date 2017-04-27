@@ -23,6 +23,13 @@
 		</div>
 	</div>
 
+<script type="text/javascript">
+	function Hint(){
+		alert("请在下一个页面选择您中意的小伙子，我们将会为您打开一个临时qq对话窗口。");
+	}
+</script>
+
+
 	<div class="fh5co-contact animate-box">
 		<div class="container">
 			<div class="row">
@@ -77,7 +84,7 @@
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-								   <input type="submit" name="submit" value="提交"> 
+								   <input type="submit" name="submit" value="提交" onclick=Hint()> 
 								</div>
 							</div>
 						</form>
